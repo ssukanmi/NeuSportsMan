@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+    <bean name="venue" class="com.sukanmi.neusportsman.service.Venue" scope="application"/>
+	
+    <bean name="user" class="com.sukanmi.neusportsman.pojo.User"/>
+    <bean name="userdao" class="com.sukanmi.neusportsman.dao.UserDAO" scope="request"/>
+    <bean name="userValidator" class="com.sukanmi.neusportsman.validation.UserValidator"/>
+    
+    <bean name="event" class="com.sukanmi.neusportsman.pojo.Event"/>
+    <bean name="eventdao" class="com.sukanmi.neusportsman.dao.EventDAO" scope="request"/>
+    <bean name="eventValidator" class="com.sukanmi.neusportsman.validation.EventValidator"/>
+		
+</beans>
